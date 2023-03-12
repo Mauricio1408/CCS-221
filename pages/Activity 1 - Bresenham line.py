@@ -1,5 +1,4 @@
 #Bresenham's Line
-import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -11,7 +10,7 @@ def Midpoint(x, y, x2, y2):
     xMid = (x + x2)/2
     yMid = (y + y2)/2
     plt.plot(int(xMid), int(yMid), 'b.')
-    st.write('The midpoint is: ', xMid, yMid)
+    print('The midpoint is: ', xMid, yMid)
 
 def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     X_coordinates = [x1]
@@ -19,21 +18,20 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     dx = x2 - x1
     dy = y2 - y1
     Pk = 2*dy-dx 
-    st.write("     1   |   Pk    |     Xk+1     |    Yk+1    |     Plot       ")
-    st.write("         |         |        %d    |      %d    |      (%d,%d)   " % (x1, y1, x1, y1))
-    
+    print("     1   |   Pk    |     Xk+1     |    Yk+1    |     Plot       ")
+    print("         |         |        %d    |      %d    |      (%d,%d)   " % (x1, y1, x1, y1))
     for i in range(dx):
         if Pk < 0:
             Pkn = Pk + (2*dy)
             x1 += 1
-            st.write(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
+            print(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
             Pk = Pkn
 
         else:
             Pkn = Pk + (2*dy - 2*dx)
             x1 += 1
             y1 += 1
-            st.write(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
+            print(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
             Pk = Pkn
         X_coordinates.append(x1)
         Y_coordinates.append(y1)
@@ -44,14 +42,10 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     plt.scatter(X_coordinates, Y_coordinates, color='BLACK', s=25)
 
 def main():
-    st.write("Coordinates of First Point")
-    x = st.slider('x')
-    y = st.slider('y')
-    
-    st.write("Coordinates of Second Point")
-    xEnd = st.slider('x-end')
-    yEnd = st.slider('y-end')
-    
+    print("Coordinates of First Point")
+    x, y = map(int, input().split())
+    print("Coordinates of Second Point")
+    xEnd, yEnd = map(int, input().split())
     color = 'b'
     BRESENHAMS_LINE(x, y, xEnd, yEnd, color)
     Midpoint(x, y, xEnd, yEnd)
