@@ -12,7 +12,7 @@ def main():
 
   st.header("Task 1")
   st.subheader("Midpoint line")
-  st.pyplot(task_one.MIDPOINT(x1,y1,x2,y2)
+  st.pyplot(task_one.MIDPOINT(x1,y1,x2,y2))
             
   if st.button("Exit"):
             st.stop()
