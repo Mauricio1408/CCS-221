@@ -1,5 +1,5 @@
 #import streamlit as st
-import pages.tasks as task_one
+import tasks as task_one
 
 def main():
   st.title('Midterms in CC201')
