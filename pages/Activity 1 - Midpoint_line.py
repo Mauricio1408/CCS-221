@@ -38,12 +38,5 @@ def MIDPOINT(x1, y1, x2, y2):
     plt.plot(int(xMid), int(yMid), 'b.')
     plt.grid()
     plt.scatter(xcoordinates, ycoordinates, color='Red', s=25)
-    plt. show()
 
-if __name__ == '__main__':
-    x1 = int(input('Enter the starting point of x: '))
-    y1 = int(input('Enter the starting point of y: '))
-    x2 = int(input('Enter the end point of x: '))
-    y2 = int(input('Enter the end point of y: '))
 
-    MIDPOINT(x1, y1, x2, y2) 
