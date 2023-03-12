@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import sys
-from tasks_py import MIDPOINT
+import tasks.py as task_one
 
 st.title('Midterms in CC201')
 
