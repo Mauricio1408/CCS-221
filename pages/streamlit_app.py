@@ -14,7 +14,7 @@ def main():
   st.subheader("Midpoint line")
   st.pyplot(task_one.MIDPOINT(x1,y1,x2,y2)
             
-  if st.button("Exit")
+  if st.button("Exit"):
      st.stop()
            
 if  __name__ == "__main__":
