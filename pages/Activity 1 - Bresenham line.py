@@ -46,9 +46,9 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
 def main():
     st.write("Coordinates of First Point")
     x = st.slider('x')
-    x = st.slider('y')
-    st.write("Coordinates of Second Point")
+    y = st.slider('y')
     
+    st.write("Coordinates of Second Point")
     xEnd = st.slider('x-end')
     yEnd = st.slider('y-end')
     
