@@ -101,7 +101,7 @@ def DDALine(x1, y1, x2, y2, color):
         plt.plot(int(x1), int(y1), color)
         x1 += Xinc
         y1 += Yinc
-    Midpoint(x1, y1, x2, y2)    
+    #Midpoint(x1, y1, x2, y2)    
     return fig
         
 
