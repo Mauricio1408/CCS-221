@@ -2,7 +2,7 @@
 
 #libraries
 
-matplotlib.pyplot
+matplotlib
 numpy
 tensorflow
 opencv-python-headless
