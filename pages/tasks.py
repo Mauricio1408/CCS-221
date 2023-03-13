@@ -82,7 +82,7 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     return fig
 
 
-def DDALine(x1, y1, x2, y2, color):
+def DDALINE(x1, y1, x2, y2, color):
     fig = plt.figure()
     
     dx = x2 - x1
