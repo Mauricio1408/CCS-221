@@ -18,7 +18,7 @@ def main():
   st.subheader("Bresenham line")
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
-  st.subheader("DDA line")
+  st.subheader("DDAline")
   st.pyplot(task_one.DDALine(x1,y1,x2,y2,'r.'))
             
   if st.button("Exit"):
