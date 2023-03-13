@@ -81,7 +81,7 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     
     return fig
 
-def DDALine (x1, y1, x2, y2, color):
+def DDALine (x1, y1, x2, y2):
     fig = plyt.figure()
     dx = x2 - x1
     dy = y2 - y1
