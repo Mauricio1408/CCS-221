@@ -12,14 +12,17 @@ def main():
                 st.sidebar.slider('y2', 1, 10)
 
   st.header("Task 1")
+  
+  st.subheader("DDAline")
+  st.pyplot(task_one.DDALINE(x1,y1,x2,y2,'ro'))
+  
   st.subheader("Midpoint line")
   st.pyplot(task_one.MIDPOINT(x1,y1,x2,y2))
   
   st.subheader("Bresenham line")
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
-  st.subheader("DDAline")
-  st.pyplot(task_one.DDALINE(x1,y1,x2,y2,'ro'))
+  
             
   if st.button("Exit"):
             st.stop()
