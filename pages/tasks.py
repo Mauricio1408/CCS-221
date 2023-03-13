@@ -6,10 +6,12 @@ plt.xlabel('X-Axis')
 plt.ylabel('Y-Axis')
 
 def DDALINE(x1, y1, x2, y2, color):
+    
     fig = plt.figure()
     
     dx = x2 - x1
     dy = y2 - y1
+   
 
     # calculate steps required for generating pixels
 
@@ -24,7 +26,7 @@ def DDALINE(x1, y1, x2, y2, color):
         plt.plot(int(x1), int(y1), color)
         x1 += Xinc
         y1 += Yinc
-    Midpoint(x1, y1, x2, y2)    
+    #Midpoint(x1, y1, x2, y2)    
    
     return fig
 
@@ -106,14 +108,15 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
 
         
 def main():
-        plt.title('DDALine')
-    x1 = int(input("Enter X1: "))
-    y1= int(input("Enter Y1: "))
-    x2 = int(input("Enter X2: "))
-    y2 = int(input("Enter Y2: "))
-    color = "ro"
-  
-    fig = DDALINE(x1, y1, x2, y2, color)
+        plt.title("DDA Line Algorithm")
+    x=int(input("Enter X1:"))
+    y=int(input("Enter Y1:"))
+    xEnd= int(input("Enter X2:"))
+    yEnd = int(input("Enter Y2:"))
+    color = "r."
+
+    fig = DDALine(x, y, xEnd, yEnd, color)
+    plt.show()
     
     BRESENHAMS_LINE(x1, y1, x2, y2, color)
     
