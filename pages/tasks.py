@@ -5,6 +5,29 @@ plt.title('Lines')
 plt.xlabel('X-Axis')
 plt.ylabel('Y-Axis')
 
+def DDALINE(x1, y1, x2, y2, color):
+    fig = plt.figure()
+    
+    dx = x2 - x1
+    dy = y2 - y1
+
+    # calculate steps required for generating pixels
+
+    steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
+
+    # calculate increment in x and y for each step
+    Xinc = float(dx / steps)
+    Yinc = float(dy / steps)
+
+    for i in range(0, int(steps + 1)):
+        #Draw pixels
+        plt.plot(int(x1), int(y1), color)
+        x1 += Xinc
+        y1 += Yinc
+    Midpoint(x1, y1, x2, y2)    
+   
+    return fig
+
 def MIDPOINT(x1, y1, x2, y2):
     fig = plt.figure()
     dx = x2 - x1
@@ -81,28 +104,6 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     
     return fig
 
-def DDALINE(x1, y1, x2, y2, color):
-    fig = plt.figure()
-    
-    dx = x2 - x1
-    dy = y2 - y1
-
-    # calculate steps required for generating pixels
-
-    steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
-
-    # calculate increment in x and y for each step
-    Xinc = float(dx / steps)
-    Yinc = float(dy / steps)
-
-    for i in range(0, int(steps + 1)):
-        #Draw pixels
-        plt.plot(int(x1), int(y1), color)
-        x1 += Xinc
-        y1 += Yinc
-    Midpoint(x1, y1, x2, y2)    
-   
-    return fig
         
 def main():
     plt.title('DDALine')
