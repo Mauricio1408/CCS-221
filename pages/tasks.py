@@ -81,7 +81,6 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     
     return fig
 
-
 def DDALINE(x1, y1, x2, y2, color):
     fig = plt.figure()
     
@@ -101,10 +100,24 @@ def DDALINE(x1, y1, x2, y2, color):
         plt.plot(int(x1), int(y1), color)
         x1 += Xinc
         y1 += Yinc
-    #Midpoint(x1, y1, x2, y2)    
-    fig = DDALINE(x1, y1, x2, y2, color)
+    Midpoint(x1, y1, x2, y2)    
+   
     return fig
         
-
+def main():
+    plt.title('DDALine')
+    x1 = int(input("Enter X1: "))
+    y1= int(input("Enter Y1: "))
+    x2 = int(input("Enter X2: "))
+    y2 = int(input("Enter Y2: "))
+    color = "ro"
+  
+    fig = DDALINE(x1, y1, x2, y2, color)
     
+    BRESENHAMS_LINE(x1, y1, x2, y2, color)
+    
+    MIDPOINT(x1, y1, x2, y2)
+    
+if __name__ == '__main__':
+    main()
 
