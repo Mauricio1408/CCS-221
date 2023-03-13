@@ -15,7 +15,7 @@ def MIDPOINT(x1, y1, x2, y2):
     d = dy - (dx/2)
     x = x1
     y = y1
-    print('x = %s, y = %s' % (x, y))
+#     print('x = %s, y = %s' % (x, y))
     #initialize the plotting points
     xcoordinates = [x]
     ycoordinates = [y]
@@ -33,8 +33,8 @@ def MIDPOINT(x1, y1, x2, y2):
         
         xcoordinates.append(x)
         ycoordinates.append(y)
-        print('x = %s, y = %s' % (x, y))
-        print('Midpoint is at', xMid, yMid)
+#         print('x = %s, y = %s' % (x, y))
+#         print('Midpoint is at', xMid, yMid)
     plt.plot(xcoordinates, ycoordinates)
     plt.plot(int(xMid), int(yMid), 'b.')
     plt.grid()
@@ -54,13 +54,13 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     dx = x2 - x1
     dy = y2 - y1
     Pk = 2*dy-dx 
-    print("     1   |   Pk    |     Xk+1     |    Yk+1    |     Plot       ")
-    print("         |         |        %d    |      %d    |      (%d,%d)   " % (x1, y1, x1, y1))
+#     print("     1   |   Pk    |     Xk+1     |    Yk+1    |     Plot       ")
+#     print("         |         |        %d    |      %d    |      (%d,%d)   " % (x1, y1, x1, y1))
     for i in range(dx):
         if Pk < 0:
             Pkn = Pk + (2*dy)
             x1 += 1
-            print(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
+#             print(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
             Pk = Pkn
 
         else:
