@@ -108,7 +108,6 @@ def main():
     color = "r."
 
     fig = DDALine(x, y, xEnd, yEnd, color)
-    plt.show()
     
     BRESENHAMS_LINE(x1, y1, x2, y2, color)
     
