@@ -19,7 +19,7 @@ def main():
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
   st.subheader("DDAline")
-  st.pyplot(task_one.DDALine(x1,y1,x2,y2,'r.'))
+  st.pyplot(task_one.DDALine(x1,y1,x2,y2,'BLACK'))
             
   if st.button("Exit"):
             st.stop()
