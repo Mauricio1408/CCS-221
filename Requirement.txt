@@ -2,7 +2,7 @@ Mauricio Manuel Bergancia, Gillie Calanuga
 
 #libraries
 
-matplotlib
+matplotlib.pyplot
 numpy
 tensorflow
 opencv-python-headless
