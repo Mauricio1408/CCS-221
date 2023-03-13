@@ -67,7 +67,7 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
             Pkn = Pk + (2*dy - 2*dx)
             x1 += 1
             y1 += 1
-            print(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
+#             print(" %d     |    %d     |    %d     |    %d      |    %d    | (%d,%d)    " % (1, Pk, Pkn, x1, y1, x1, y1))
             Pk = Pkn
         X_coordinates.append(x1)
         Y_coordinates.append(y1)
