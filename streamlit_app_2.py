@@ -14,7 +14,7 @@ def main():
   st.header("Task 1")
   
   st.subheader("DDAline")
-  st.pyplot(task_one.DDALINE(x1,y1,x2,y2,'ro'))
+  st.pyplot(task_one.DDALine(x1,y1,x2,y2,'ro'))
   
   st.subheader("Midpoint line")
   st.pyplot(task_one.MIDPOINT(x1,y1,x2,y2))
