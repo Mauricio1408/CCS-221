@@ -106,7 +106,7 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
 
         
 def main():
-    plt.title('DDALine')
+        plt.title('DDALine')
     x1 = int(input("Enter X1: "))
     y1= int(input("Enter Y1: "))
     x2 = int(input("Enter X2: "))
