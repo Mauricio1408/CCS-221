@@ -81,5 +81,26 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     
     return fig
 
+def DDALine (x1, y1, x2, y2, color):
+    fig = plyt.figure()
+    dx = x2 - x1
+    dy = y2 - y1
+
+    # calculate steps required for generating pixels
+
+    steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
+
+    # calculate increment in x and y for each step
+    Xinc = float(dx / steps)
+    Yinc = float(dy / steps)
+
+    for i in range(0, int(steps + 1)):
+        #Draw pixels
+        plt.plot(int(x1), int(y1), color='r.')
+        x1 += Xinc
+        y1 += Yinc
+    return fig
+        
+
     
 
