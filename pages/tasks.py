@@ -96,9 +96,10 @@ def DDALine(x1, y1, x2, y2, color):
 
     for i in range(0, int(steps + 1)):
         #Draw pixels
+        plt.plot(int(x1), int(y1), color)
         x1 += Xinc
         y1 += Yinc
-        plt.plot(int(x1), int(y1), color)
+        
 
     Midpoint(x1, y1, x2, y2)    
     return fig
