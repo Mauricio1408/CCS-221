@@ -16,7 +16,7 @@ def change_boundary_fill(x_val, y_val, c, boarder):
     
     
 def boundary_fill(x_val, y_val, c, boarder):
-  fig - plt.figure()
+  fig = plt.figure()
   change_boundary_fill(x_val, y_val, c, boarder)
 
   img = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
