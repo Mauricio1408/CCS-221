@@ -37,10 +37,10 @@ def main():
   st.sidebar.subheader("Activity 2")
   
   st.subheader("Boundary Fill")
-  st.pyplot(task_2.boundary_fill(task_2_x,tas_2_y,color_,boundary_color))
+  st.pyplot(task_two.boundary_fill(task_2_x,tas_2_y,color_,boundary_color))
   
   st.subheader("Flood Fill")
-  st.pyplot(task_2.flood_fill(task_2_x,tas_2_y,color_,boundary_color))
+  st.pyplot(task_two.flood_fill(task_2_x,tas_2_y,color_,boundary_color))
             
   if st.button("Exit"):
             st.stop()
