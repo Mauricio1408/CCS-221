@@ -58,7 +58,6 @@ def change_boarder_fill(x_val, y_val, c, boarder, two_d_arr):
     return fig
 
 def BOUNDARY_FILL(x_val, y_val, c, boarder):
-    fig = plt.figure()
     two_d_arr = np.array([[1,1,1,1,1], 
                       [1,4,0,3,1],
                       [1,7,5,9,1],
@@ -74,4 +73,4 @@ def BOUNDARY_FILL(x_val, y_val, c, boarder):
     img.set_clim([0,50])    
     plt.colorbar()
     
-    return fig
+    return img
