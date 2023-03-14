@@ -28,8 +28,49 @@ def main():
   st.subheader("Bresenham line")
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
+ 
+
+
+  #4 pixel implementation
+def change_boarder_fill(x_val, y_val, c, boarder, two_d_arr):
+    
+    fig = plt.figure()
+
+    if two_d_arr[x_val][y_val] != boarder and two_d_arr[x_val][y_val] != c:
+        
+        two_d_arr[x_val][y_val] = c
+        
+        change_boarder_fill(x_val + 1, y_val, c, boarder, two_d_arr)
+        change_boarder_fill(x_val - 1, y_val, c, boarder, two_d_arr)
+        change_boarder_fill(x_val, y_val + 1, c, boarder, two_d_arr)
+        change_boarder_fill(x_val, y_val - 1, c, boarder, two_d_arr)
+    
+    return fig
+
+def BOUNDARY_FILL(x_val, y_val, c, boarder):
+    fig = plt.figure()
+    two_d_arr = np.array([[1,1,1,1,1], 
+                      [1,4,0,3,1],
+                      [1,7,5,9,1],
+                      [1,4,0,3,1],
+                      [1,7,5,9,1],
+                      [1,4,0,3,1],
+                      [1,7,5,9,1],
+                      [1,1,1,1,1]])
+    
+    change_boarder_fill(x_val, y_val, c, boarder, two_d_arr)
+
+    img = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
+    img.set_clim([0,50])    
+    plt.colorbar()
+    
+    return fig
+  
+  
+  
+  
   st.subheader("Boundary Fill")
-  st.pyplot(task_one.BOUNDARY_FILL(task_2_x,tas_2_y,color_,boundary_color))
+  st.pyplot(BOUNDARY_FILL(task_2_x,tas_2_y,color_,boundary_color))
   
             
   if st.button("Exit"):
