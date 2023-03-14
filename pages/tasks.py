@@ -20,6 +20,7 @@ def DDALine (x1, y1, x2, y2, color):
         x1 += Xinc
         y1 += Yinc
     
+    Midpoint(x1, y1, x2, y2)
     return fig
 
 def MIDPOINT(x1, y1, x2, y2):
