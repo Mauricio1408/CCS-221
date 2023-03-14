@@ -98,8 +98,6 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     
     return fig
 
-
-
 #4 pixel implementation
 def change_boarder_fill(x_val, y_val, c, boarder, two_d_arr):
     
@@ -116,7 +114,7 @@ def change_boarder_fill(x_val, y_val, c, boarder, two_d_arr):
     
     return fig
 
-def boundary_fill(x_val, y_val, c, boarder):
+def BOUNDARY_FILL(x_val, y_val, c, boarder):
     fig = plt.figure()
     two_d_arr = np.array([[1,1,1,1,1], 
                       [1,4,0,3,1],
@@ -134,6 +132,3 @@ def boundary_fill(x_val, y_val, c, boarder):
     plt.colorbar()
     
     return fig
-        
-
-
