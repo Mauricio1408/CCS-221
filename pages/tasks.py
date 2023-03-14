@@ -98,21 +98,4 @@ def BRESENHAMS_LINE(x1, y1, x2, y2, color):
     
     return fig
 
-        
-def main():
-        plt.title("DDA Line Algorithm")
-    x=int(input("Enter X1:"))
-    y=int(input("Enter Y1:"))
-    xEnd= int(input("Enter X2:"))
-    yEnd = int(input("Enter Y2:"))
-    color = "r."
-
-    fig = DDALine(x, y, xEnd, yEnd, color)
-    
-    BRESENHAMS_LINE(x1, y1, x2, y2, color)
-    
-    MIDPOINT(x1, y1, x2, y2)
-    
-if __name__ == '__main__':
-    main()
 
