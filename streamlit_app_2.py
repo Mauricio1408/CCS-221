@@ -11,6 +11,12 @@ def main():
                 st.sidebar.slider('x2', 1, 10), \
                 st.sidebar.slider('y2', 1, 10)
 
+  
+  task_2_x, tas_2_y, color_, boundary_color = st.sidebar.slider('X: (0-4)', 0, 4), \
+                 st.sidebar.slider('Y: (0-8)', 0, 8),\
+                 st.sidebar.slider('Color value: (1-50)', 1, 50),\
+                 st.sidebar.slider('Boundary Color: ', 1, 50)
+  
   st.header("Task 1")
   
   st.subheader("DDAline")
@@ -22,6 +28,8 @@ def main():
   st.subheader("Bresenham line")
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
+  st.subheader("Boundary Fill")
+  st.pyplot(task_one.boundary_fill(task_2_x,tas_2_y,color_,boundary_color))
   
             
   if st.button("Exit"):
