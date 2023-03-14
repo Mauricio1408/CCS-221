@@ -29,7 +29,7 @@ def main():
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
   st.subheader("Boundary Fill")
-  st.pyplot(task_one.boundary_fill(task_2_x,tas_2_y,color_,boundary_color))
+  st.pyplot(task_one.BOUNDARY_FILL(task_2_x,tas_2_y,color_,boundary_color))
   
             
   if st.button("Exit"):
