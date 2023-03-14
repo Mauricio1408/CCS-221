@@ -15,11 +15,12 @@ def change_boarder_fill(x_val, y_val, c, boarder, two_d_arr):
         change_boarder_fill(x_val, y_val + 1, c, boarder, two_d_arr)
         change_boarder_fill(x_val, y_val - 1, c, boarder, two_d_arr)
     
-    img = plt.figure(two_d_arr, interpolation = 'none', cmap = 'BrBG')
+    img = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
     img.set_clim([0,50])    
     plt.colorbar()
     
-    return img
+    save = plt.savefig(img)
+    return save
 
 def BOUNDARY_FILL(x_val, y_val, c, boarder):
     two_d_arr = np.array([[1,1,1,1,1], 
