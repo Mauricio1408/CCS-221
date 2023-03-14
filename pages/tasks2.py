@@ -1,7 +1,7 @@
 #4 pixel implementation
 #bounary fill
 def change_boundary_fill(x_val, y_val, c, boarder):
-  fig =plt.figure()
+  fig = plt.figure()
 
   if two_d_arr[x_val][y_val] != boarder and two_d_arr[x_val][y_val] != c:
        
@@ -16,13 +16,13 @@ def change_boundary_fill(x_val, y_val, c, boarder):
     
     
 def boundary_fill(x_val, y_val, c, boarder):
-  fig = plt.figure()
+#   fig = plt.figure()
   change_boundary_fill(x_val, y_val, c, boarder)
 
   img = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
   img.set_clim([0,50])    
   plt.colorbar()
-  return fig
+  return img
 
 
 #flood_fill_algorithm
@@ -53,6 +53,6 @@ def flood_fill(x_val, y_val, c, old_c):
     img.set_clim([0,50])    
     plt.colorbar()
     
-    return fig
+    return img
 
         
