@@ -1,32 +1,42 @@
 #4 pixel implementation
 #bounary fill
-def change_boundary_fill(x_val, y_val, c, boarder):
+def change_boundary_fill(x_val, y_val, c, boarder, two_d_arr):
   fig = plt.figure()
 
   if two_d_arr[x_val][y_val] != boarder and two_d_arr[x_val][y_val] != c:
        
     two_d_arr[x_val][y_val] = c
         
-    change_boundary_fill(x_val + 1, y_val, c, boarder)
-    change_boundary_fill(x_val - 1, y_val, c, boarder)
-    change_boundary_fill(x_val, y_val + 1, c, boarder)
-    change_boundary_fill(x_val, y_val - 1, c, boarder)
+    change_boundary_fill(x_val + 1, y_val, c, boarder, two_d_arr)
+    change_boundary_fill(x_val - 1, y_val, c, boarder, two_d_arr)
+    change_boundary_fill(x_val, y_val + 1, c, boarder, two_d_arr)
+    change_boundary_fill(x_val, y_val - 1, c, boarder, two_d_arr)
    
   return fig
     
     
 def boundary_fill(x_val, y_val, c, boarder):
-#   fig = plt.figure()
-  change_boundary_fill(x_val, y_val, c, boarder)
+  fig = plt.figure()
+  
+  two_d_arr = np.array([[1,1,1,1,1], 
+                      [1,4,0,3,1],
+                      [1,7,5,9,1],
+                      [1,4,0,3,1],
+                      [1,7,5,9,1],
+                      [1,4,0,3,1],
+                      [1,7,5,9,1],
+                      [1,1,1,1,1]])
+ 
+  change_boundary_fill(x_val, y_val, c, boarder, two_d_arr)
 
-  img = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
-  img.set_clim([0,50])    
+  fig = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
+  fig.set_clim([0,50])    
   plt.colorbar()
-  return img
+  return fig
 
 
 #flood_fill_algorithm
-def change_flood_fill(x_val, y_val, c, old_color):
+def change_flood_fill(x_val, y_val, c, old_color, two_d_arr):
         fig = plt.figure()
         x = len(two_d_arr)
         y = len(two_d_arr[0])
@@ -36,23 +46,27 @@ def change_flood_fill(x_val, y_val, c, old_color):
         
         else:
                 two_d_arr[x_val][y_val] = c
-                change_flood_fill(x_val + 1, y_val, c, old_color)
-                change_flood_fill(x_val - 1, y_val, c, old_color)
-                change_flood_fill(x_val, y_val - 1, c, old_color)
-                change_flood_fill(x_val, y_val + 1, c, old_color)
+                change_flood_fill(x_val + 1, y_val, c, old_color, two_d_arr)
+                change_flood_fill(x_val - 1, y_val, c, old_color, two_d_arr)
+                change_flood_fill(x_val, y_val - 1, c, old_color, two_d_arr)
+                change_flood_fill(x_val, y_val + 1, c, old_color, two_d_arr)
                 
         return fig
       
       
 def flood_fill(x_val, y_val, c, old_c):
     fig = plt.figure()
+    two_d_arr = np.array([[1,0,1], 
+                      [1,1,1],
+                      [1,0,1]]) 
+    
     if old_c == c:
         return fig
-    change_flood_fill (x_val, y_val, c, old_c)
-    img = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
-    img.set_clim([0,50])    
+    change_flood_fill (x_val, y_val, c, old_c, two_d_arr)
+    fig = plt.imshow(two_d_arr, interpolation = 'none', cmap = 'BrBG')
+    fig.set_clim([0,50])    
     plt.colorbar()
     
-    return img
+    return fig
 
         
