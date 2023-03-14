@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 
 import pages.tasks as task_one
-import pages.tasks2 as task_two
+# import pages.tasks2 as task_two
 
 def main():
   
