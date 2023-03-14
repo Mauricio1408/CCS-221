@@ -3,9 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pages.tasks as task_one
 
-def main():
-  
-  #4 pixel implementation
+ #4 pixel implementation
 def change_boarder_fill(x_val, y_val, c, boarder, two_d_arr):
     
     fig = plt.figure()
@@ -38,7 +36,9 @@ def BOUNDARY_FILL(x_val, y_val, c, boarder):
     plt.colorbar()
     
     return img
- 
+
+
+def main():
   
   st.title('Midterms in CC201')
 
