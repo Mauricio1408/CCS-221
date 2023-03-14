@@ -7,13 +7,17 @@ plt.ylabel('Y-Axis')
 
 def DDALine (x1, y1, x2, y2, color):
     fig = plt.figure()
-    dx = x2 -x1
-    dy = y2 -y1
+    dx = x2 - x1
+    dy = y2 - y1
 
-    steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
+#     steps = abs(dx) if abs(dx) > abs(dy) else abs(dy)
+    if abs(dx) > abs(dy):
+        steps = abs(dx)
+    else:
+        steps = abs(dy)
 
-    Xinc = float (dx / steps)
-    Yinc = float (dx / steps)
+    Xinc = float(dx / steps)
+    Yinc = float(dx / steps)
 
     for i in range(0, int(steps +1)):
         plt.plot(int(x1), int(y1), color)
