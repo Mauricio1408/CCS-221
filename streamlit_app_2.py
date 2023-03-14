@@ -1,12 +1,15 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
+import cv2
+
 import pages.tasks as task_one
+import pages.tasks2 as task_two
 
 def main():
   
   st.title('Midterms in CC201')
-
+  st.sidebar.subheader("Activity 1")
   x1, y1, x2, y2 = st.sidebar.slider('x1', 1, 10), \
                 st.sidebar.slider('y1', 1, 10), \
                 st.sidebar.slider('x2', 1, 10), \
@@ -29,8 +32,15 @@ def main():
   st.subheader("Bresenham line")
   st.pyplot(task_one.BRESENHAMS_LINE(x1,y1,x2,y2, 'ro'))
   
+  #activity 2
+  st.header("Task 2")
+  st.sidebar.subheader("Activity 2")
+  
   st.subheader("Boundary Fill")
-  st.pyplot(BOUNDARY_FILL(task_2_x,tas_2_y,color_,boundary_color))
+  st.pyplot(task_2.boundary_fill(task_2_x,tas_2_y,color_,boundary_color))
+  
+  st.subheader("Flood Fill")
+  st.pyplot(task_2.flood_fill(task_2_x,tas_2_y,color_,boundary_color))
             
   if st.button("Exit"):
             st.stop()
